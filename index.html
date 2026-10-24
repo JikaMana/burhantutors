@@ -41,9 +41,12 @@
           class="links"
           id="links"
           aria-label="Primary">
-          <a href="#programs">Programs</a><a href="#syllabus">Syllabus</a
-          ><a href="#how">How it works</a><a href="#faq">Questions</a
-          ><a
+          <a href="#programs">Programs</a>
+          <a href="#syllabus">Syllabus</a>
+          <a href="#how">How it works</a>
+          <a href="#playground">Try it</a>
+          <a href="#faq">Questions</a>
+          <a
             class="btn p"
             href="#enrol"
             >Reserve a seat</a
@@ -1131,6 +1134,43 @@
         </div>
       </section>
 
+<section class="alt pg" id="playground"><div class="wrap">
+  <span class="lab">Try it</span>
+  <h2>Write code. <em>See it run.</em></h2>
+  <p class="lead" style="margin:18px 0 36px">A real editor and console, right here. Python runs in your browser. Web mode renders HTML, CSS and JavaScript live.</p>
+
+  <div class="pg-box" id="pg" data-mode="python">
+    <div class="pg-bar">
+      <div class="pg-tabs" role="tablist" aria-label="Language">
+        <button role="tab" id="pg-m-python" aria-selected="true" data-mode="python">Python</button>
+        <button role="tab" id="pg-m-web" aria-selected="false" data-mode="web" tabindex="-1">Web</button>
+      </div>
+      <div class="pg-tabs pg-files" role="tablist" aria-label="Files" hidden>
+        <button role="tab" aria-selected="true" data-file="html">index.html</button>
+        <button role="tab" aria-selected="false" data-file="css" tabindex="-1">style.css</button>
+        <button role="tab" aria-selected="false" data-file="js" tabindex="-1">script.js</button>
+      </div>
+      <div class="pg-act">
+        <button class="pg-btn" id="pg-reset" type="button">Reset</button>
+        <button class="pg-btn" id="pg-stop" type="button" hidden>Stop</button>
+        <button class="pg-btn pg-run" id="pg-run" type="button">Run ▸</button>
+      </div>
+    </div>
+    <div class="pg-main">
+      <div class="pg-ed">
+        <label for="pg-code" class="pg-sr">Code editor</label>
+        <textarea id="pg-code" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea>
+        <p class="pg-hint">Ctrl/Cmd + Enter to run · Esc then Tab to leave the editor</p>
+      </div>
+      <div class="pg-out">
+        <iframe id="pg-frame" title="Live preview" sandbox="allow-scripts"></iframe>
+        <div class="pg-conhead">Console <span id="pg-status"></span></div>
+        <div class="pg-con" id="pg-con" role="log" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
       <section
         class="en"
         id="enrol">
@@ -1289,7 +1329,7 @@
             </p>
           </details>
         </div>
-      </section>
+      </section><foot
     </main>
     <footer>
       <div class="wrap">
@@ -1302,6 +1342,9 @@
     </footer>
     <script
       src="js/main.js"
+      defer></script>
+    <script
+      src="js/playground.js"
       defer></script>
   </body>
 </html>
