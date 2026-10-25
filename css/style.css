@@ -463,24 +463,30 @@ em {
   color: var(--mut);
   font-size: 0.97rem;
 }
-.module-points {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.module-roadmap {
+  margin-top: 4px;
 }
-.module-points li {
-  position: relative;
-  padding: 16px 0 16px 26px;
+.module-step {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 16px;
+  padding: 19px 0;
   border-bottom: 1px solid var(--line);
 }
-.module-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1.75em;
-  width: 12px;
-  height: 2px;
-  background: var(--clay);
+.module-period {
+  padding-top: 5px;
+  color: var(--ac);
+  font: 500 11px/1.6 var(--mono);
+  text-transform: uppercase;
+}
+.module-step h4 {
+  margin: 0 0 5px;
+  font: 600 1.18rem/1.3 var(--sans);
+}
+.module-step p {
+  color: var(--mut);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 .module-download {
   margin-top: 22px;
@@ -715,6 +721,10 @@ footer .wrap {
     grid-template-columns: 1fr;
   }
   .row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .module-step {
     grid-template-columns: 1fr;
     gap: 4px;
   }
